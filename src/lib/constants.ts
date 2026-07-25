@@ -5,6 +5,9 @@ export const SITE_NAME = "Nerdworking";
 /** Cache-bust cuando cambies public/logo.png (sube el número). */
 export const LOGO_SRC = "/logo.png?v=4";
 
+/** Imagen Open Graph / WhatsApp (1200×630, sin transparencia). */
+export const OG_IMAGE = "/og-image.jpg";
+
 export const NAV_LINKS = [
   { href: "/podcast", label: "Podcast" },
   { href: "/noticias", label: "Noticias" },

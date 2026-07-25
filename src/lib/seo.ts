@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { getSiteConfig } from "./content";
-import { LOGO_SRC } from "./constants";
-
-const DEFAULT_OG_IMAGE = LOGO_SRC;
+import { OG_IMAGE } from "./constants";
 
 /** Keywords SEO en español — uso moderado en meta y soporte de marca. */
 export const SITE_KEYWORDS = [
@@ -35,7 +33,12 @@ export async function createPageMetadata({
 }): Promise<Metadata> {
   const site = await getSiteConfig();
   const url = `${site.url}${path}`;
-  const ogImage = image ?? `${site.url}${DEFAULT_OG_IMAGE}`;
+  // WhatsApp/Facebook: URL absoluta, sin query string, JPG 1200×630
+  const ogImage = image
+    ? image.startsWith("http")
+      ? image
+      : `${site.url}${image}`
+    : `${site.url}${OG_IMAGE}`;
   const mergedKeywords = Array.from(
     new Set([...SITE_KEYWORDS, ...keywords, site.name, site.founder.name])
   );
@@ -74,6 +77,7 @@ export async function createPageMetadata({
           url: ogImage,
           width: 1200,
           height: 630,
+          type: "image/jpeg",
           alt: `${site.name} | ${site.founder.name}`,
         },
       ],
