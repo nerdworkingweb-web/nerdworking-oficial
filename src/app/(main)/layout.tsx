@@ -2,6 +2,9 @@ import { AppShell } from "@/components/layout/AppShell";
 import { Footer } from "@/components/layout/Footer";
 import { PageTransition } from "@/components/ui/PageTransition";
 
+/** Contenido editable desde /admin (site, servicios, etc.) no debe cachearse. */
+export const dynamic = "force-dynamic";
+
 export default function MainLayout({
   children,
 }: {

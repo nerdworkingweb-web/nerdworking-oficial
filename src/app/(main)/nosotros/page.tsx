@@ -6,6 +6,8 @@ import { getSiteConfig } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata() {
   return createPageMetadata({
     title: "Nosotros — Nerdworking y Manuel Vargas",

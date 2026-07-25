@@ -11,7 +11,7 @@ import { LOGO_SRC } from "@/lib/constants";
 
 const SESSION_KEY = "nw-admin-session";
 
-type Tab = "noticias" | "services" | "nosotros" | "footer";
+type Tab = "noticias" | "services" | "nosotros" | "contacto";
 
 const EMPTY_SITE: SiteConfig = {
   name: "",
@@ -173,13 +173,20 @@ export default function AdminPanel() {
   async function saveServices() {
     setLoading(true);
     setError("");
+    setMessage("");
     try {
       const res = await fetch("/api/services", {
         method: "PUT",
         headers: authHeaders(),
         body: JSON.stringify(services),
       });
-      flash(res.ok ? "Servicios guardados" : "", res.ok ? undefined : "Error al guardar servicios");
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setError(data.error || "Error al guardar servicios");
+        return;
+      }
+      flash("Servicios guardados — se ven en /servicios y en Inicio");
+      await loadData();
     } catch {
       setError("Error de conexión");
     } finally {
@@ -190,13 +197,20 @@ export default function AdminPanel() {
   async function saveSite(successMsg: string) {
     setLoading(true);
     setError("");
+    setMessage("");
     try {
       const res = await fetch("/api/site", {
         method: "PUT",
         headers: authHeaders(),
         body: JSON.stringify(site),
       });
-      flash(res.ok ? successMsg : "", res.ok ? undefined : "Error al guardar");
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setError(data.error || "Error al guardar");
+        return;
+      }
+      flash(successMsg);
+      await loadData();
     } catch {
       setError("Error de conexión");
     } finally {
@@ -208,7 +222,7 @@ export default function AdminPanel() {
     { key: "noticias", label: "Noticias" },
     { key: "services", label: "Servicios" },
     { key: "nosotros", label: "Nosotros" },
-    { key: "footer", label: "Footer" },
+    { key: "contacto", label: "Contacto" },
   ];
 
   const inputClass =
@@ -622,7 +636,9 @@ export default function AdminPanel() {
 
             <button
               type="button"
-              onClick={() => saveSite("Nosotros guardado")}
+              onClick={() =>
+                saveSite("Nosotros guardado — se ve en /nosotros")
+              }
               disabled={loading}
               className="px-6 py-2.5 bg-violet-600 hover:bg-violet-500 disabled:opacity-60 rounded-lg text-sm font-medium"
             >
@@ -631,11 +647,14 @@ export default function AdminPanel() {
           </div>
         )}
 
-        {tab === "footer" && (
+        {tab === "contacto" && (
           <div className="space-y-4">
             <div className={cardClass}>
               <p className="text-sm text-neutral-400">
-                Links de los íconos del footer (YouTube, LinkedIn, Email).
+                Un solo lugar para YouTube, LinkedIn y correo. Al guardar se
+                actualizan los íconos del <strong className="text-neutral-200">footer</strong> y
+                los links a la izquierda del formulario en{" "}
+                <strong className="text-neutral-200">/contacto</strong>.
               </p>
               <div>
                 <label className={labelClass}>YouTube</label>
@@ -668,11 +687,15 @@ export default function AdminPanel() {
             </div>
             <button
               type="button"
-              onClick={() => saveSite("Footer guardado")}
+              onClick={() =>
+                saveSite(
+                  "Contacto guardado — footer y /contacto actualizados"
+                )
+              }
               disabled={loading}
               className="px-6 py-2.5 bg-violet-600 hover:bg-violet-500 disabled:opacity-60 rounded-lg text-sm font-medium"
             >
-              Guardar footer
+              Guardar contacto
             </button>
           </div>
         )}

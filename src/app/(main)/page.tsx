@@ -1,19 +1,19 @@
 import { VideoHero } from "@/components/home/VideoHero";
 import { Hero } from "@/components/home/Hero";
 import { FeaturesSection } from "@/components/home/FeaturesSection";
-import { LatestNews } from "@/components/home/LatestNews";
 import { PodcastPreview } from "@/components/home/PodcastPreview";
 import { ServicesPreview } from "@/components/home/ServicesPreview";
 import { CTASection } from "@/components/home/CTASection";
 import {
   getSiteConfig,
-  getFeaturedNews,
   getPodcastEpisodes,
   getServices,
 } from "@/lib/content";
 import { fetchYouTubeVideos } from "@/lib/youtube";
 import { createPageMetadata } from "@/lib/seo";
 import type { PodcastEpisode } from "@/lib/types";
+
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata() {
   const site = await getSiteConfig();
@@ -31,8 +31,7 @@ export async function generateMetadata() {
 
 export default async function HomePage() {
   const site = await getSiteConfig();
-  const [news, episodes, services, youtubeVideos] = await Promise.all([
-    getFeaturedNews(3),
+  const [episodes, services, youtubeVideos] = await Promise.all([
     getPodcastEpisodes(),
     getServices(),
     site.youtubeChannelId
@@ -57,7 +56,6 @@ export default async function HomePage() {
       <VideoHero />
       <Hero tagline={site.tagline} />
       <FeaturesSection />
-      <LatestNews articles={news} />
       <PodcastPreview episodes={podcastEpisodes} />
       <ServicesPreview services={services} />
       <CTASection />

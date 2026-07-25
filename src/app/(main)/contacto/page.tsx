@@ -9,6 +9,8 @@ import { getSiteConfig } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata() {
   return createPageMetadata({
     title: "Contacto Nerdworking",
@@ -33,10 +35,22 @@ export default async function ContactoPage() {
   const site = await getSiteConfig();
 
   const contactLinks = [
-    { label: "Email", href: `mailto:${site.email}`, text: site.email },
-    { label: "LinkedIn", href: site.linkedin, text: site.linkedin.replace("https://", "") },
-    { label: "YouTube", href: site.youtube, text: site.youtube.replace("https://", "") },
-  ];
+    {
+      label: "Email",
+      href: `mailto:${site.email}`,
+      text: site.email,
+    },
+    {
+      label: "LinkedIn",
+      href: site.linkedin,
+      text: site.linkedin.replace(/^https?:\/\//, ""),
+    },
+    {
+      label: "YouTube",
+      href: site.youtube,
+      text: site.youtube.replace(/^https?:\/\//, ""),
+    },
+  ].filter((link) => Boolean(link.text?.trim()));
 
   return (
     <>

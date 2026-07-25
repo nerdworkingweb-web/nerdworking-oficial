@@ -9,6 +9,8 @@ import { fetchYouTubeVideos } from "@/lib/youtube";
 import { createPageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata() {
   return createPageMetadata({
     title: "Podcast Nerdworking con Manuel Vargas",

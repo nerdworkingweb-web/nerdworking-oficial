@@ -16,12 +16,38 @@ export async function PUT(request: Request) {
   }
 
   try {
-    const body = (await request.json()) as SiteConfig;
-    if (!body?.name || !body?.email) {
+    const body = (await request.json()) as Partial<SiteConfig>;
+    const current = await getSiteConfig();
+
+    const founder = {
+      ...current.founder,
+      ...(body.founder ?? {}),
+    };
+    const linkedin = founder.linkedin?.trim();
+    const sameAs = Array.from(
+      new Set(
+        [linkedin, ...(founder.sameAs ?? [])].filter(
+          (url): url is string => Boolean(url?.trim())
+        )
+      )
+    );
+
+    const next: SiteConfig = {
+      ...current,
+      ...body,
+      founder: { ...founder, sameAs },
+      about: {
+        ...current.about,
+        ...(body.about ?? {}),
+      },
+    };
+
+    if (!next.name?.trim() || !next.email?.trim()) {
       return NextResponse.json({ error: "Datos incompletos" }, { status: 400 });
     }
-    await saveSiteConfig(body);
-    return NextResponse.json({ success: true });
+
+    await saveSiteConfig(next);
+    return NextResponse.json({ success: true, site: next });
   } catch (error) {
     const message =
       error instanceof Error ? error.message : "No se pudo guardar";
