@@ -635,10 +635,11 @@ export default function AdminPanel() {
           <div className="space-y-4">
             <div className={cardClass}>
               <p className="text-sm text-neutral-400">
-                Campos de la columna izquierda de /contacto (canal, LinkedIn y correo).
+                Links de los íconos del footer (LinkedIn, YouTube, Email) y de la
+                columna izquierda de /contacto.
               </p>
               <div>
-                <label className={labelClass}>YouTube (canal)</label>
+                <label className={labelClass}>YouTube (ícono footer)</label>
                 <input
                   value={site.youtube}
                   onChange={(e) => setSite({ ...site, youtube: e.target.value })}
@@ -647,7 +648,7 @@ export default function AdminPanel() {
                 />
               </div>
               <div>
-                <label className={labelClass}>LinkedIn</label>
+                <label className={labelClass}>LinkedIn (ícono footer)</label>
                 <input
                   value={site.linkedin}
                   onChange={(e) => setSite({ ...site, linkedin: e.target.value })}
@@ -656,7 +657,7 @@ export default function AdminPanel() {
                 />
               </div>
               <div>
-                <label className={labelClass}>Correo</label>
+                <label className={labelClass}>Correo (ícono footer + mailto)</label>
                 <input
                   type="email"
                   value={site.email}
@@ -668,11 +669,11 @@ export default function AdminPanel() {
             </div>
             <button
               type="button"
-              onClick={() => saveSite("Contacto guardado")}
+              onClick={() => saveSite("Links del footer / contacto guardados")}
               disabled={loading}
               className="px-6 py-2.5 bg-violet-600 hover:bg-violet-500 disabled:opacity-60 rounded-lg text-sm font-medium"
             >
-              Guardar contacto
+              Guardar links del footer
             </button>
           </div>
         )}
