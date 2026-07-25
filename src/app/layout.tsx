@@ -5,7 +5,7 @@ import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { GoogleTagManager } from "@/components/analytics/GoogleTagManager";
 import { getSiteConfig } from "@/lib/content";
 import { nerdworkingJsonLd } from "@/lib/schema";
-import { LOGO_SRC, OG_IMAGE } from "@/lib/constants";
+import { OG_IMAGE } from "@/lib/constants";
 import { SITE_KEYWORDS } from "@/lib/seo";
 import "./globals.css";
 
@@ -64,8 +64,12 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [OG_IMAGE],
     },
     icons: {
-      icon: LOGO_SRC,
-      apple: LOGO_SRC,
+      icon: [
+        { url: "/favicon.ico", sizes: "any" },
+        { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+        { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      ],
+      apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
     },
     robots: {
       index: true,
