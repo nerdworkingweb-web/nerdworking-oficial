@@ -11,7 +11,7 @@ import { LOGO_SRC } from "@/lib/constants";
 
 const SESSION_KEY = "nw-admin-session";
 
-type Tab = "noticias" | "services" | "nosotros" | "contacto";
+type Tab = "noticias" | "services" | "nosotros" | "footer";
 
 const EMPTY_SITE: SiteConfig = {
   name: "",
@@ -208,7 +208,7 @@ export default function AdminPanel() {
     { key: "noticias", label: "Noticias" },
     { key: "services", label: "Servicios" },
     { key: "nosotros", label: "Nosotros" },
-    { key: "contacto", label: "Contacto" },
+    { key: "footer", label: "Footer" },
   ];
 
   const inputClass =
@@ -631,15 +631,14 @@ export default function AdminPanel() {
           </div>
         )}
 
-        {tab === "contacto" && (
+        {tab === "footer" && (
           <div className="space-y-4">
             <div className={cardClass}>
               <p className="text-sm text-neutral-400">
-                Links de los íconos del footer (LinkedIn, YouTube, Email) y de la
-                columna izquierda de /contacto.
+                Links de los íconos del footer (YouTube, LinkedIn, Email).
               </p>
               <div>
-                <label className={labelClass}>YouTube (ícono footer)</label>
+                <label className={labelClass}>YouTube</label>
                 <input
                   value={site.youtube}
                   onChange={(e) => setSite({ ...site, youtube: e.target.value })}
@@ -648,7 +647,7 @@ export default function AdminPanel() {
                 />
               </div>
               <div>
-                <label className={labelClass}>LinkedIn (ícono footer)</label>
+                <label className={labelClass}>LinkedIn</label>
                 <input
                   value={site.linkedin}
                   onChange={(e) => setSite({ ...site, linkedin: e.target.value })}
@@ -657,7 +656,7 @@ export default function AdminPanel() {
                 />
               </div>
               <div>
-                <label className={labelClass}>Correo (ícono footer + mailto)</label>
+                <label className={labelClass}>Correo</label>
                 <input
                   type="email"
                   value={site.email}
@@ -669,11 +668,11 @@ export default function AdminPanel() {
             </div>
             <button
               type="button"
-              onClick={() => saveSite("Links del footer / contacto guardados")}
+              onClick={() => saveSite("Footer guardado")}
               disabled={loading}
               className="px-6 py-2.5 bg-violet-600 hover:bg-violet-500 disabled:opacity-60 rounded-lg text-sm font-medium"
             >
-              Guardar links del footer
+              Guardar footer
             </button>
           </div>
         )}

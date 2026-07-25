@@ -51,8 +51,10 @@ export async function POST(request: Request) {
     await saveLinkedInEmbeds(embeds);
 
     return NextResponse.json(embed, { status: 201 });
-  } catch {
-    return NextResponse.json({ error: "Solicitud inválida" }, { status: 400 });
+  } catch (error) {
+    const message =
+      error instanceof Error ? error.message : "Solicitud inválida";
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
 

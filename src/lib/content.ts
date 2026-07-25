@@ -1,5 +1,3 @@
-import fs from "fs/promises";
-import path from "path";
 import type {
   LinkedInEmbed,
   LinkedInPost,
@@ -8,19 +6,7 @@ import type {
   Service,
   SiteConfig,
 } from "./types";
-
-const CONTENT_DIR = path.join(process.cwd(), "content");
-
-async function readJson<T>(filename: string): Promise<T> {
-  const filePath = path.join(CONTENT_DIR, filename);
-  const data = await fs.readFile(filePath, "utf-8");
-  return JSON.parse(data) as T;
-}
-
-async function writeJson<T>(filename: string, data: T): Promise<void> {
-  const filePath = path.join(CONTENT_DIR, filename);
-  await fs.writeFile(filePath, JSON.stringify(data, null, 2), "utf-8");
-}
+import { readJson, writeJson } from "./storage";
 
 export async function getSiteConfig(): Promise<SiteConfig> {
   return readJson<SiteConfig>("site.json");

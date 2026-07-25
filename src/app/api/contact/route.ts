@@ -66,7 +66,11 @@ export async function POST(request: NextRequest) {
       type,
     };
 
-    await saveContactBackup(data);
+    try {
+      await saveContactBackup(data);
+    } catch (backupError) {
+      console.error("Backup de contacto no persistido:", backupError);
+    }
 
     const { sent, error } = await sendContactEmail(data);
 
