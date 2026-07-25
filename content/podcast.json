@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "title": "El futuro de la IA en las empresas latinoamericanas",
+    "description": "Conversamos con líderes de tecnología sobre cómo están implementando inteligencia artificial y cuáles son los retos más urgentes en la región.",
+    "youtubeId": "dQw4w9WgXcQ",
+    "guest": "María González",
+    "guestRole": "CTO, FinTech LATAM",
+    "publishedAt": "2026-06-30T10:00:00.000Z",
+    "duration": "45 min"
+  },
+  {
+    "id": "2",
+    "title": "Ciberseguridad: más allá del firewall",
+    "description": "Un CISO comparte su estrategia para proteger activos digitales en un entorno de amenazas cada vez más sofisticadas.",
+    "youtubeId": "dQw4w9WgXcQ",
+    "guest": "Carlos Mendoza",
+    "guestRole": "CISO, Retail Corp",
+    "publishedAt": "2026-06-23T10:00:00.000Z",
+    "duration": "52 min"
+  },
+  {
+    "id": "3",
+    "title": "Cloud native: migración sin fricciones",
+    "description": "Experiencias reales de transformación cloud en empresas medianas y grandes de Latinoamérica.",
+    "youtubeId": "dQw4w9WgXcQ",
+    "guest": "Ana Rodríguez",
+    "guestRole": "VP Engineering, SaaS Global",
+    "publishedAt": "2026-06-16T10:00:00.000Z",
+    "duration": "48 min"
+  },
+  {
+    "id": "4",
+    "title": "Data-driven: cultura y tecnología",
+    "description": "Cómo construir una organización que toma decisiones basadas en datos, desde la estrategia hasta la ejecución.",
+    "youtubeId": "dQw4w9WgXcQ",
+    "guest": "Roberto Silva",
+    "guestRole": "CDO, Banco Regional",
+    "publishedAt": "2026-06-09T10:00:00.000Z",
+    "duration": "55 min"
+  },
+  {
+    "id": "5",
+    "title": "Próximo episodio: Innovación abierta y startups",
+    "description": "Exploraremos cómo las corporaciones están colaborando con startups para acelerar su innovación.",
+    "youtubeId": "",
+    "guest": "Por confirmar",
+    "guestRole": "Chief Innovation Officer",
+    "publishedAt": "2026-07-15T10:00:00.000Z",
+    "upcoming": true
+  }
+]

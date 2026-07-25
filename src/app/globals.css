@@ -1,0 +1,358 @@
+@import "tailwindcss";
+
+/* ─── Light theme ─── */
+:root,
+[data-theme="light"] {
+  --background: #f4f4f8;
+  --foreground: #0a0a12;
+  --card: #ffffff;
+  --surface: #eaeaf2;
+  --surface-hover: #dedee8;
+  --border: #c8c8d8;
+  --border-subtle: #d8d8e4;
+  --muted: #4a4a62;
+  --accent: #6d28d9;
+  --accent-light: #7c3aed;
+  --accent-glow: rgba(109, 40, 217, 0.18);
+  --gradient-start: #6d28d9;
+  --gradient-end: #4338ca;
+  --grid-color: #d8d8e4;
+  --selection-bg: #6d28d9;
+  --selection-fg: #ffffff;
+  --on-accent-bg: #0a0a12;
+  --on-accent-text: #ffffff;
+  --inverse-bg: #0a0a12;
+  --inverse-text: #ffffff;
+  --card-shadow: 0 4px 24px -4px rgba(10, 10, 18, 0.08);
+  /* LinkedIn card tokens */
+  --li-card: #ffffff;
+  --li-text: #191919;
+  --li-muted: #666666;
+  --li-border: #e0e0e0;
+  --li-divider: #e8e8e8;
+  --li-hover: #f3f3f3;
+  --li-footer: #f9f9f9;
+}
+
+/* ─── Dark theme (default futuristic) ─── */
+[data-theme="dark"] {
+  --background: #08080f;
+  --foreground: #f2f2fa;
+  --card: #11111b;
+  --surface: #1a1a28;
+  --surface-hover: #242436;
+  --border: #32324a;
+  --border-subtle: #222233;
+  --muted: #9b9bb8;
+  --accent: #a855f7;
+  --accent-light: #c084fc;
+  --accent-glow: rgba(168, 85, 247, 0.28);
+  --gradient-start: #a855f7;
+  --gradient-end: #6366f1;
+  --grid-color: #1a1a28;
+  --selection-bg: #a855f7;
+  --selection-fg: #ffffff;
+  --on-accent-bg: #ffffff;
+  --on-accent-text: #0a0a12;
+  --inverse-bg: #ffffff;
+  --inverse-text: #0a0a12;
+  --card-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.5);
+  /* LinkedIn card tokens — slightly adapted for dark bg */
+  --li-card: #1c1c2a;
+  --li-text: #e8e8f0;
+  --li-muted: #9b9bb0;
+  --li-border: #2e2e42;
+  --li-divider: #2a2a3d;
+  --li-hover: #242436;
+  --li-footer: #161622;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+::selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-fg);
+}
+
+/* ─── Utilities ─── */
+.glow-accent {
+  box-shadow: 0 0 40px var(--accent-glow), 0 0 80px var(--accent-glow);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-accent {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+}
+
+.border-glow {
+  border: 1px solid var(--border);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.border-glow:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-size: 3rem 3rem;
+}
+
+/* ─── Animations ─── */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; box-shadow: 0 0 20px var(--accent-glow); }
+  50% { opacity: 1; box-shadow: 0 0 40px var(--accent-glow); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes unroll-reveal {
+  0% {
+    clip-path: inset(0 0 100% 0 round 0 0 1rem 1rem);
+    transform: perspective(1200px) rotateX(6deg);
+  }
+  100% {
+    clip-path: inset(0 0 0 0 round 0 0 1rem 1rem);
+    transform: perspective(1200px) rotateX(0deg);
+  }
+}
+
+@keyframes page-enter {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+.animate-fade-in { animation: fade-in 0.6s ease-out forwards; }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+.animate-marquee { animation: marquee-scroll 30s linear infinite; }
+
+.unroll-idle {
+  clip-path: inset(0 0 100% 0 round 0 0 1rem 1rem);
+  transform: perspective(1200px) rotateX(6deg);
+  opacity: 0.4;
+}
+
+.unroll-active {
+  animation: unroll-reveal 1.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.page-transition { flex: 1; display: flex; flex-direction: column; }
+.page-transition.page-enter {
+  animation: page-enter 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.mask-marquee {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent 0%, var(--accent-glow) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* ─── Cards ─── */
+.card-hover {
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 24px var(--accent-glow), var(--card-shadow);
+  transform: translateY(-3px);
+}
+
+/* ─── Buttons on gradient / high-contrast surfaces ─── */
+.btn-inverse {
+  background: var(--inverse-bg);
+  color: var(--inverse-text);
+  border: 1px solid transparent;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-inverse:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-light {
+  background: transparent;
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+/* ─── LinkedIn cards — equal height grid rule ─── */
+.linkedin-post {
+  height: 100%;
+}
+
+.linkedin-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+@media (min-width: 1024px) {
+  .linkedin-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1280px) {
+  .linkedin-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ─── Nav ─── */
+.nav-link { position: relative; }
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+  border-radius: 1px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
+
+.nav-item-active {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  color: white;
+  box-shadow: 0 4px 16px var(--accent-glow);
+}
+
+/* ─── Inputs ─── */
+.input-field {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--foreground);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-field:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+  outline: none;
+}
+
+/* ─── Prose ─── */
+.prose-content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.prose-content p:last-child { margin-bottom: 0; }
+
+.hr-gradient {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border) 20%, var(--border) 80%, transparent);
+}
+
+.legal-content strong {
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+/* ─── Video overlay ─── */
+.video-hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(8, 8, 15, 0.4) 60%,
+    var(--background) 100%
+  );
+}
+
+[data-theme="light"] .video-hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(248, 248, 252, 0.3) 60%,
+    var(--background) 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee, .unroll-active, .page-transition.page-enter,
+  .animate-float, .animate-pulse-glow, .animate-shimmer {
+    animation: none;
+  }
+  .unroll-idle { clip-path: none; transform: none; opacity: 1; }
+}

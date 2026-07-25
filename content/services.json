@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "slug": "generacion-oportunidades-b2b",
+    "title": "Generación de Oportunidades B2B",
+    "shortDescription": "Conectamos empresas tecnológicas con tomadores de decisión de alto nivel en Latinoamérica.",
+    "description": "Nerdworking facilita conexiones de alto valor entre proveedores de tecnología y ejecutivos que toman decisiones de compra. A través de nuestro ecosistema de contenido, eventos y networking, generamos oportunidades comerciales calificadas que aceleran el ciclo de ventas B2B.\n\nTrabajamos con empresas tecnológicas que buscan posicionarse ante CIOs, CTOs, CDOs y gerentes de innovación en la región, creando momentos de contacto auténticos y relevantes.",
+    "benefits": [
+      "Acceso directo a tomadores de decisión C-level",
+      "Leads calificados con contexto de negocio",
+      "Posicionamiento como referente en tu vertical",
+      "Networking con ejecutivos de empresas líderes"
+    ],
+    "icon": "network",
+    "order": 1
+  },
+  {
+    "id": "2",
+    "slug": "podcast-corporativo",
+    "title": "Podcast Corporativo",
+    "shortDescription": "Producción y difusión de podcasts B2B con alcance regional y audiencia ejecutiva.",
+    "description": "El podcast es una de las herramientas más efectivas para posicionar a líderes y marcas en el ecosistema B2B. En Nerdworking producimos podcasts corporativos con estándares profesionales, distribución multiplataforma y acceso a nuestra audiencia de ejecutivos.\n\nDesde la conceptualización hasta la producción y promoción, acompañamos a las empresas en la creación de contenido de audio que genera autoridad y conexiones.",
+    "benefits": [
+      "Producción profesional end-to-end",
+      "Distribución en Spotify, Apple Podcasts y YouTube",
+      "Acceso a invitados de alto perfil",
+      "Métricas y reportes de audiencia"
+    ],
+    "icon": "mic",
+    "order": 2
+  },
+  {
+    "id": "3",
+    "slug": "difusion-de-marcas",
+    "title": "Difusión de Marcas",
+    "shortDescription": "Posicionamiento estratégico de marcas tecnológicas ante audiencias ejecutivas.",
+    "description": "Ayudamos a las marcas tecnológicas a construir presencia y autoridad en el mercado latinoamericano. A través de contenido editorial, presencia en nuestro podcast y activaciones digitales, posicionamos tu marca ante la audiencia que importa.\n\nNuestro enfoque no es publicidad tradicional: es storytelling B2B que genera confianza y reconocimiento entre los decisores de tecnología.",
+    "benefits": [
+      "Contenido editorial de alto impacto",
+      "Presencia en medios especializados",
+      "Storytelling alineado a tu propuesta de valor",
+      "Alcance orgánico y segmentado"
+    ],
+    "icon": "megaphone",
+    "order": 3
+  },
+  {
+    "id": "4",
+    "slug": "publicidad-b2b",
+    "title": "Publicidad B2B",
+    "shortDescription": "Campañas publicitarias segmentadas para empresas tecnológicas en LATAM.",
+    "description": "Diseñamos y ejecutamos campañas publicitarias B2B con segmentación precisa hacia ejecutivos de tecnología e innovación. Combinamos medios propios, redes profesionales y canales digitales para maximizar el impacto de tu inversión.\n\nCada campaña se diseña con objetivos claros de generación de demanda, awareness o posicionamiento, con métricas transparentes y optimización continua.",
+    "benefits": [
+      "Segmentación por cargo, industria y región",
+      "Formatos nativos y no intrusivos",
+      "Reporting detallado de performance",
+      "Optimización basada en datos"
+    ],
+    "icon": "target",
+    "order": 4
+  },
+  {
+    "id": "5",
+    "slug": "campanas-tecnologicas",
+    "title": "Campañas para Empresas Tecnológicas",
+    "shortDescription": "Activaciones integrales para lanzamientos, eventos y posicionamiento tech.",
+    "description": "Las empresas tecnológicas necesitan campañas que hablen el idioma de sus compradores. Diseñamos activaciones integrales que combinan contenido, eventos, digital y relaciones públicas para maximizar el impacto de lanzamientos, webinars y programas de demand generation.\n\nNuestro equipo entiende el ciclo de compra B2B tech y diseña experiencias que mueven a los prospectos a través del funnel.",
+    "benefits": [
+      "Estrategia integral multicanal",
+      "Activaciones para lanzamientos y eventos",
+      "Contenido técnico accesible para ejecutivos",
+      "Integración con equipos de marketing y ventas"
+    ],
+    "icon": "rocket",
+    "order": 5
+  },
+  {
+    "id": "6",
+    "slug": "conexion-decisores",
+    "title": "Conexión con Tomadores de Decisión",
+    "shortDescription": "Acceso exclusivo a una red de CIOs, CTOs y líderes de innovación en Latinoamérica.",
+    "description": "Nuestra red de relaciones con ejecutivos de tecnología e innovación es uno de nuestros activos más valiosos. Facilitamos conexiones directas, reuniones one-to-one y programas de advisory que generan valor para ambas partes.\n\nIdeal para empresas que buscan validar productos, obtener feedback de mercado o establecer relaciones comerciales de largo plazo con líderes influyentes.",
+    "benefits": [
+      "Red curada de ejecutivos C-level",
+      "Programas de advisory y feedback",
+      "Reuniones facilitadas y contextualizadas",
+      "Relaciones de largo plazo"
+    ],
+    "icon": "users",
+    "order": 6
+  }
+]

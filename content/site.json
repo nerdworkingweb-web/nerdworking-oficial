@@ -1,0 +1,25 @@
+{
+  "name": "Nerdworking",
+  "tagline": "Nerdworking conecta tecnología, negocios y personas para acelerar la transformación digital de Latinoamérica.",
+  "description": "Nerdworking es el medio B2B de tecnología de Latinoamérica fundado por Manuel Vargas. Conectamos CIOs, CTOs y empresas tecnológicas a través de podcast, contenido y oportunidades comerciales.",
+  "url": "https://nerdworking.com",
+  "email": "contacto@nerdworking.com",
+  "linkedin": "https://www.linkedin.com/company/nerdworking",
+  "youtube": "https://www.youtube.com/@nerdworking",
+  "youtubeChannelId": "UC5igv0fREQhN5nLrlIecS5A",
+  "founder": {
+    "name": "Manuel Vargas",
+    "role": "Fundador & CEO de Nerdworking",
+    "bio": "Manuel Vargas es emprendedor y comunicador, fundador y CEO de Nerdworking. Con más de una década de experiencia en medios B2B y transformación digital en Latinoamérica, crea el espacio donde ejecutivos y empresas tecnológicas se encuentran, aprenden y generan oportunidades.",
+    "email": "mvargas@nerdworking.cl",
+    "linkedin": "https://www.linkedin.com/in/manuelvargas",
+    "sameAs": [
+      "https://www.linkedin.com/in/manuelvargas"
+    ]
+  },
+  "about": {
+    "history": "Nerdworking nació de la visión de Manuel Vargas: Latinoamérica necesitaba un medio especializado que hablara el idioma de los ejecutivos de tecnología y los líderes de negocio. Lo que comenzó como un podcast se transformó en una plataforma integral de contenido, networking y oportunidades comerciales B2B.",
+    "purpose": "El propósito de Nerdworking es ser el puente entre la innovación tecnológica y la toma de decisiones estratégicas en las empresas de Latinoamérica, facilitando conexiones de alto valor entre tomadores de decisión y empresas tecnológicas.",
+    "vision": "La visión de Nerdworking es convertirse en la referencia de tecnología y negocios en Latinoamérica, donde cada CIO, CTO y CEO encuentre el contenido, las conexiones y las oportunidades para liderar la transformación digital de su organización."
+  }
+}

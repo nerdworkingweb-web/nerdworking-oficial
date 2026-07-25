@@ -1,0 +1,39 @@
+[
+  {
+    "id": "1",
+    "author": "Manuel Vargas",
+    "authorRole": "Fundador & CEO en Nerdworking",
+    "authorCompany": "Nerdworking",
+    "content": "La transformación digital en Latinoamérica ya no es opcional.\n\nCada semana converso con CIOs y CTOs que comparten el mismo desafío: cómo acelerar la innovación sin perder de vista el retorno de negocio.\n\nEn Nerdworking seguimos construyendo el espacio donde tecnología y estrategia se encuentran. 🚀",
+    "publishedAt": "2026-07-08T14:30:00.000Z",
+    "likes": 128,
+    "comments": 24,
+    "reposts": 9,
+    "linkedinUrl": "https://linkedin.com/company/nerdworking"
+  },
+  {
+    "id": "2",
+    "author": "Nerdworking",
+    "authorRole": "Medio B2B de Tecnología",
+    "authorCompany": "Nerdworking",
+    "content": "🎙️ Nuevo episodio del podcast Nerdworking.\n\nConversamos sobre IA generativa en empresas latinoamericanas: retos, oportunidades y casos reales de implementación con líderes de tecnología.\n\n¿Ya lo escuchaste? Cuéntanos qué te pareció en los comentarios.",
+    "publishedAt": "2026-07-05T10:00:00.000Z",
+    "likes": 87,
+    "comments": 15,
+    "reposts": 12,
+    "linkedinUrl": "https://linkedin.com/company/nerdworking",
+    "imageCaption": "Podcast · El futuro de la IA en LATAM"
+  },
+  {
+    "id": "3",
+    "author": "Manuel Vargas",
+    "authorRole": "Fundador & CEO en Nerdworking",
+    "authorCompany": "Nerdworking",
+    "content": "3 tendencias que los ejecutivos de tecnología en LATAM no pueden ignorar en 2026:\n\n→ IA generativa con ROI medible\n→ Ciberseguridad como prioridad de directorio\n→ Cloud híbrido como estrategia dominante\n\n¿Cuál está liderando la agenda en tu organización?",
+    "publishedAt": "2026-07-01T09:15:00.000Z",
+    "likes": 203,
+    "comments": 41,
+    "reposts": 18,
+    "linkedinUrl": "https://linkedin.com/in/manuelvargas"
+  }
+]

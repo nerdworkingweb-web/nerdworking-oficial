@@ -1,0 +1,64 @@
+[
+  {
+    "id": "1",
+    "slug": "ia-generativa-transformacion-empresas-latam",
+    "title": "La IA generativa redefine la transformación digital en empresas latinoamericanas",
+    "excerpt": "Las organizaciones de la región aceleran la adopción de modelos de lenguaje y automatización inteligente para ganar ventaja competitiva.",
+    "content": "La inteligencia artificial generativa ha dejado de ser una tendencia experimental para convertirse en un pilar estratégico de las empresas latinoamericanas. Según estudios recientes, más del 60% de las organizaciones medianas y grandes en la región ya tienen proyectos activos de IA.\n\nLos CIOs y CTOs enfrentan el desafío de integrar estas tecnologías de manera responsable, considerando aspectos de gobernanza, seguridad de datos y retorno de inversión. Las empresas que logran articular una estrategia clara de IA están viendo mejoras significativas en productividad, experiencia del cliente y toma de decisiones.\n\nEn Nerdworking seguiremos analizando cómo los líderes de tecnología en Latinoamérica están navegando esta transformación.",
+    "category": "ia",
+    "author": "Equipo Nerdworking",
+    "publishedAt": "2026-07-01T10:00:00.000Z",
+    "featured": true
+  },
+  {
+    "id": "2",
+    "slug": "ciberseguridad-prioridad-cios-2026",
+    "title": "Ciberseguridad: la prioridad número uno de los CIOs en 2026",
+    "excerpt": "El aumento de ataques dirigidos a infraestructura crítica impulsa inversiones record en seguridad digital en la región.",
+    "content": "La ciberseguridad se ha consolidado como la inversión tecnológica más crítica para las empresas latinoamericanas. Los ataques de ransomware, phishing dirigido a ejecutivos y vulnerabilidades en la cadena de suministro digital han elevado la conciencia en las juntas directivas.\n\nLos CISOs reportan presupuestos en aumento, pero también una creciente presión por demostrar ROI en seguridad. Las estrategias de Zero Trust, gestión de identidades y respuesta a incidentes son las áreas con mayor demanda de talento y soluciones.\n\nNerdworking continuará cubriendo las mejores prácticas y casos de éxito en ciberseguridad empresarial.",
+    "category": "ciberseguridad",
+    "author": "Equipo Nerdworking",
+    "publishedAt": "2026-06-28T10:00:00.000Z",
+    "featured": true
+  },
+  {
+    "id": "3",
+    "slug": "cloud-hibrido-estrategia-latam",
+    "title": "Cloud híbrido: la estrategia preferida de las empresas en Latinoamérica",
+    "excerpt": "Las organizaciones combinan nubes públicas y privadas para equilibrar flexibilidad, costos y cumplimiento regulatorio.",
+    "content": "El enfoque híbrido y multicloud se ha convertido en la norma para las empresas latinoamericanas que buscan modernizar su infraestructura sin comprometer el control sobre datos sensibles.\n\nLos proveedores globales y regionales compiten por capturar esta demanda, mientras los equipos de TI deben gestionar la complejidad operativa de entornos distribuidos. La optimización de costos cloud y la gobernanza de datos siguen siendo los principales desafíos reportados por los CTOs.\n\nEn las próximas semanas profundizaremos en las mejores estrategias de migración y optimización cloud para la región.",
+    "category": "cloud",
+    "author": "Equipo Nerdworking",
+    "publishedAt": "2026-06-25T10:00:00.000Z"
+  },
+  {
+    "id": "4",
+    "slug": "datos-activo-estrategico-negocios",
+    "title": "Los datos como activo estratégico: lecciones de líderes B2B",
+    "excerpt": "CDOs y analistas de negocio comparten cómo convertir datos en ventaja competitiva sostenible.",
+    "content": "La madurez en gestión de datos se ha convertido en un diferenciador clave para las empresas que compiten en mercados cada vez más digitalizados. Los Chief Data Officers en Latinoamérica reportan avances significativos en gobernanza de datos, pero persisten desafíos en calidad, integración y cultura data-driven.\n\nLas organizaciones líderes invierten en plataformas de analytics modernas, equipos multidisciplinarios y programas de alfabetización de datos para toda la empresa. El resultado: decisiones más rápidas, personalización de experiencias y nuevos modelos de negocio basados en datos.",
+    "category": "datos",
+    "author": "Equipo Nerdworking",
+    "publishedAt": "2026-06-20T10:00:00.000Z"
+  },
+  {
+    "id": "5",
+    "slug": "transformacion-digital-pymes-latam",
+    "title": "Transformación digital en PyMEs: oportunidades y desafíos en LATAM",
+    "excerpt": "Las pequeñas y medianas empresas aceleran su digitalización con soluciones accesibles y enfoque en resultados.",
+    "content": "La transformación digital ya no es exclusiva de las grandes corporaciones. Las PyMEs latinoamericanas están adoptando herramientas cloud, automatización y comercio digital a un ritmo acelerado, impulsadas por la necesidad de competir en mercados globalizados.\n\nSin embargo, la falta de talento especializado y recursos limitados siguen siendo barreras. Las empresas que logran superar estos obstáculos mediante alianzas estratégicas y soluciones modulares están experimentando crecimiento significativo.",
+    "category": "transformacion-digital",
+    "author": "Equipo Nerdworking",
+    "publishedAt": "2026-06-15T10:00:00.000Z"
+  },
+  {
+    "id": "6",
+    "slug": "ecosistema-startups-tech-latam-2026",
+    "title": "El ecosistema de startups tech en LATAM alcanza nuevo récord de inversión",
+    "excerpt": "Fintech, healthtech y enterprise SaaS lideran las rondas de financiamiento en la región durante el primer semestre.",
+    "content": "El capital de riesgo continúa fluyendo hacia startups tecnológicas latinoamericanas, con un enfoque creciente en soluciones B2B y enterprise. Los inversionistas buscan equipos con tracción comprobada, modelos de negocio escalables y capacidad de expansión regional.\n\nPara los ejecutivos corporativos, este ecosistema representa tanto una fuente de innovación como una oportunidad de partnership estratégico. Las alianzas entre corporaciones y startups están generando modelos de innovación abierta cada vez más sofisticados.",
+    "category": "negocios",
+    "author": "Equipo Nerdworking",
+    "publishedAt": "2026-06-10T10:00:00.000Z"
+  }
+]
