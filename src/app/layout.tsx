@@ -5,7 +5,7 @@ import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { GoogleTagManager } from "@/components/analytics/GoogleTagManager";
 import { getSiteConfig } from "@/lib/content";
 import { nerdworkingJsonLd } from "@/lib/schema";
-import { LOGO_SRC } from "@/lib/constants";
+import { LOGO_SRC, OG_IMAGE } from "@/lib/constants";
 import { SITE_KEYWORDS } from "@/lib/seo";
 import "./globals.css";
 
@@ -46,9 +46,13 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: site.name,
       title: `${site.name} — Medio B2B de Tecnología | ${site.founder.name}`,
       description: site.description,
+      url: site.url,
       images: [
         {
-          url: LOGO_SRC,
+          url: OG_IMAGE,
+          width: 1200,
+          height: 630,
+          type: "image/jpeg",
           alt: `Logo de ${site.name}, medio B2B fundado por ${site.founder.name}`,
         },
       ],
@@ -57,7 +61,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: `${site.name} | ${site.founder.name}`,
       description: site.description,
-      images: [LOGO_SRC],
+      images: [OG_IMAGE],
     },
     icons: {
       icon: LOGO_SRC,
